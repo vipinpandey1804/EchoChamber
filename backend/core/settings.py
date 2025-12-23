@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-i^&%)afuxua53s807^vu*hczo@=9plu14+cl1^5sum5-8ocpjy')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
-
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,*.railway.app').split(',')
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') != 'True'
+print(DEBUG)
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,web-production-19b2d.up.railway.app').split(',')
 
 CORS_ALLOW_ALL_ORIGINS = True
 
